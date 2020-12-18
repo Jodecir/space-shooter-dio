@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Principal;
+	src:url(../fonts/Orbitron-VariableFont_wght.ttf);
+}
+
 :root {
   --verde: #42e96b;
   --branco: #ffffff;
@@ -11,6 +16,7 @@
 }
 
 body {
+	font-family: Principal;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -18,7 +24,6 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
   background-color: var(--verde);
 }
 
@@ -32,15 +37,15 @@ body {
 .game-instructions {
   position: relative;
   color: var(--branco);
-  left: 7rem;
+  text-align: center;
   top: 0px;
 }
 
 .start-button {
   position: relative;
   color: var(--branco);
-  top: 9rem;
-  left: 15.5rem;
+  text-align: center;
+  top: 11rem;
   cursor: pointer;
 }
 

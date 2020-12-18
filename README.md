@@ -20,6 +20,7 @@ Repositório da aula de JS ensinada na plataforma da Digital Innovation One, cuj
 
 ### Recursos CSS:
 
+* [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face)
 * [:root](https://www.w3schools.com/cssref/sel_root.asp)
 * [transition](https://www.w3schools.com/css/css3_transitions.asp)
 * [opacity](https://www.w3schools.com/css/css_image_transparency.asp)
@@ -29,6 +30,6 @@ Repositório da aula de JS ensinada na plataforma da Digital Innovation One, cuj
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://https://www.linkedin.com/in/jodecir/)](https://www.linkedin.com/in/jodecir/) 
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jodecirneto@gmail.com)](mailto:jodecirneto@gmail.com)
 
-### Art Credits:
+#### Art Credits:
 
 FavIcon feito por: <a href="https://icons8.com/icons" title="icons8">Icons8</a>
