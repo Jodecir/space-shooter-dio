@@ -1,3 +1,9 @@
+:root {
+  --verde: #42e96b;
+  --branco: #ffffff;
+  --preto: #000000;
+}
+
 * {
   margin:0;
   padding:0;
@@ -13,11 +19,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  background-color: #42e96b;
+  background-color: var(--verde);
 }
 
 #main-play-area {
-  background: #000;
+  background: var(--preto);
   background-image: url(../img/space.png);
   height: 600px;
   width: 600px;
@@ -25,14 +31,14 @@ body {
 
 .game-instructions {
   position: relative;
-  color: white;
+  color: var(--branco);
   left: 7rem;
   top: 0px;
 }
 
 .start-button {
   position: relative;
-  color: white;
+  color: var(--branco);
   top: 9rem;
   left: 15.5rem;
   cursor: pointer;
