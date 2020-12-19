@@ -6,14 +6,23 @@ const startButton = document.querySelector('.start-button');
 
 let alienInterval;
 
-function flyShip(event) {
-  if(event.key === 'ArrowUp') {
+let Key = {
+  ArrowUp: 38,
+  ArrowDown: 40,
+  SpaceBar: 32,
+  W: 87,
+  S: 83,
+  D: 68,
+}
+
+function playerMovement(event) {
+  if(event.keyCode === Key.ArrowUp || event.keyCode === Key.W) {
     event.preventDefault();
     moveUp();
-  } else if(event.key === 'ArrowDown') {
+  } else if(event.keyCode === Key.ArrowDown || event.keyCode === Key.S) {
       event.preventDefault();
       moveDown();
-  } else if(event.key === " ") {
+  } else if(event.keyCode === Key.SpaceBar || event.keyCode === Key.D) {
       event.preventDefault();
       fireLaser();
   }
@@ -111,6 +120,7 @@ function checkLaserCollision(laser, alien) {
   let laserTop = parseInt(laser.style.top);
   let laserLeft = parseInt(laser.style.left);
   let laserCenter = laserTop + 15;
+  
   let alienTop = parseInt(alien.style.top);
   let alienLeft = parseInt(alien.style.left);
   let alienBottom = alienTop - 30;
@@ -133,14 +143,14 @@ startButton.addEventListener('click', (event) => {
 function playGame() {
   startButton.style.display = 'none';
   instructionsText.style.display = 'none';
-  window.addEventListener('keydown', flyShip);
+  window.addEventListener('keydown', playerMovement);
   alienInterval = setInterval(() => {
     createAliens();
   }, 2000);
 }
 
 function gameOver() {
-  window.removeEventListener('keydown', flyShip);
+  window.removeEventListener('keydown', playerMovement);
   clearInterval(alienInterval);
   let aliens = document.querySelectorAll('.alien');
   aliens.forEach((alien) => alien.remove());
