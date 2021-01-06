@@ -145,6 +145,7 @@ startButton.addEventListener('click', (event) => {
 })
 
 function playGame() {
+  scoreboardRefresh();
   startButton.style.display = 'none';
   instructionsText.style.display = 'none';
   window.addEventListener('keydown', playerMovement);
@@ -158,6 +159,7 @@ let scoreboardRefresh = () => {
 }
 
 function gameOver() {
+  score = 0;
   window.removeEventListener('keydown', playerMovement);
   clearInterval(alienInterval);
   let aliens = document.querySelectorAll('.alien');
