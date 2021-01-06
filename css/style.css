@@ -27,6 +27,16 @@ body {
   background-color: var(--verde);
 }
 
+h4 {
+  color: var(--branco);
+}
+
+.score {
+  color: white;
+  margin-left: 500px;
+  margin-top: 10px;
+}
+
 #main-play-area {
   background: var(--preto);
   background-image: url(../img/space.png);
@@ -45,7 +55,7 @@ body {
   position: relative;
   color: var(--branco);
   text-align: center;
-  top: 11rem;
+  top: 10rem;
   cursor: pointer;
 }
 

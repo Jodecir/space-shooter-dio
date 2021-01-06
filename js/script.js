@@ -4,7 +4,8 @@ const aliensImg = ['./img/monster-1.png', './img/monster-2.png', './img/monster-
 const instructionsText = document.querySelector('.game-instructions');
 const startButton = document.querySelector('.start-button');
 
-let alienInterval;
+let alienInterval; 
+let score = 0;
 
 let Key = {
   ArrowUp: 38,
@@ -106,6 +107,8 @@ function moveAlien(alien){
 
     if (xPosition <= 50) {
       if(Array.from(alien.classList).includes('dead-alien')) {
+        score++;
+        scoreboardRefresh();
         alien.remove();
       } else {
           gameOver();
@@ -148,6 +151,10 @@ function playGame() {
   alienInterval = setInterval(() => {
     createAliens();
   }, 2000);
+}
+
+let scoreboardRefresh = () => {
+  document.getElementById("score").innerHTML = "Score: " + score;
 }
 
 function gameOver() {
