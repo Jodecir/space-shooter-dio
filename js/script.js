@@ -168,7 +168,7 @@ function gameOver() {
   lasers.forEach((laser) => laser.remove());
   setTimeout(() => {
     document.getElementById("restart-button").innerHTML = "RESTART";
-    document.getElementById("game-over").innerHTML = "You Lose , Try Again Hero!";
+    document.getElementById("game-over").innerHTML = "You Fail , Try Again Hero!";
     yourShip.style.top = "250px";
     startButton.style.display = "block";
     instructionsText.style.display = "block";
