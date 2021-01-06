@@ -59,6 +59,13 @@ h4 {
   cursor: pointer;
 }
 
+#restart-button {
+  position: relative;
+  color: var(--branco);
+  text-align: center;
+  top: 10rem;
+}
+
 .player-shooter {
   position: relative;
   height: 60px;
