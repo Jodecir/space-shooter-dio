@@ -120,13 +120,14 @@ function checkLaserCollision(laser, alien) {
   let laserTop = parseInt(laser.style.top);
   let laserLeft = parseInt(laser.style.left);
   let laserCenter = laserTop + 15;
+  let laserBottom = laserTop - 20;
   
   let alienTop = parseInt(alien.style.top);
   let alienLeft = parseInt(alien.style.left);
   let alienBottom = alienTop - 30;
   
   if (laserLeft != 340 && laserLeft + 40 >= alienLeft) {
-    if (laserCenter <= alienTop && laserCenter >= alienBottom) {
+    if (laserTop <= alienTop && laserTop >= alienBottom || laserCenter <= alienTop && laserCenter >= alienBottom || laserBottom <= alienTop && laserTop >= alienBottom) {
       return true
     } else {
         return false;
