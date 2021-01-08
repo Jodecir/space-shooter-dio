@@ -31,12 +31,6 @@ h4 {
   color: var(--branco);
 }
 
-.score {
-  color: white;
-  margin-left: 500px;
-  margin-top: 10px;
-}
-
 #main-play-area {
   background: var(--preto);
   background-image: url(../img/space.png);
@@ -44,11 +38,18 @@ h4 {
   width: 600px;
 }
 
+.score {
+  position: absolute;
+  color: white;
+  margin-left: 500px;
+  margin-top: 10px;
+}
+
 .game-instructions {
   position: relative;
   color: var(--branco);
   text-align: center;
-  top: 0px;
+  top: 50px;
 }
 
 .start-button {
