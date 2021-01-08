@@ -1,0 +1,10 @@
+@media screen and (max-width:700px) {
+	.score {
+		margin-left: 180px;
+	}
+
+	#main-play-area {
+		height: 600px;
+		width: 425px;
+	}
+}
