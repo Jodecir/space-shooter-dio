@@ -7,6 +7,9 @@ const startButton = document.querySelector('.start-button');
 let alienInterval; 
 let score = 0;
 
+let sfxShoot=document.getElementById("sfxShoot");
+let sfxExplosion=document.getElementById("sfxExplosion");
+
 let Key = {
   ArrowUp: 38,
   ArrowDown: 40,
@@ -52,6 +55,7 @@ function moveDown() {
 }
 
 function fireLaser() {
+  sfxShoot.play();
   let laser = createLaserElement();
   playArea.appendChild(laser);
   moveLaser(laser);
@@ -75,6 +79,7 @@ function moveLaser(laser) {
 
     aliens.forEach((alien) => {
       if(checkLaserCollision(laser, alien)) {
+        sfxExplosion.play();
         alien.src = './img/explosion.png';
         alien.classList.remove('alien');
         alien.classList.add('dead-alien');
