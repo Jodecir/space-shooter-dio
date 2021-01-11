@@ -80,6 +80,8 @@ function moveLaser(laser) {
     aliens.forEach((alien) => {
       if(checkLaserCollision(laser, alien)) {
         sfxExplosion.play();
+        score++;
+        scoreboardRefresh();
         alien.src = './img/explosion.png';
         alien.classList.remove('alien');
         alien.classList.add('dead-alien');
@@ -112,8 +114,6 @@ function moveAlien(alien){
 
     if (xPosition <= 50) {
       if(Array.from(alien.classList).includes('dead-alien')) {
-        score++;
-        scoreboardRefresh();
         alien.remove();
       } else {
           gameOver();
